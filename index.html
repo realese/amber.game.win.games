@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber Game Win</title>
+    <style>
+        body {
+            background-color: #222; /* Fundo preto escuro */
+            color: #fff; /* Texto branco */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            height: 100vh; /* Tamanho total da tela */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header {
+            background-color: #008080; /* Azul esverdeado */
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+        }
+
+        h1 {
+            font-size: 2em; /* Tamanho maior */
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em; /* Tamanho do texto da descrição */
+            line-height: 1.6;
+            margin: 20px 10%;
+        }
+
+        /* Botão de Download estilizado */
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; /* Verde */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Quadrado para as imagens */
+        #image-container {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border: 2px solid #008080; /* Cor do cabeçalho para consistência visual */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-container-inner {
+            display: flex;
+            width: 500%; /* Atualizado para acomodar mais imagens */
+            transition: transform 1s ease-in-out;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #008080; /* Cor do cabeçalho para consistência visual */
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8em; /* Tamanho menor */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Amber Game Win</h1>
+    </header>
+
+    <p>Amber Game Win is an exciting Filipino game that offers a wide variety of gaming experiences. From strategic challenges to thrilling adventures, players can explore a diverse universe while immersing themselves in the rich Filipino culture. Get ready for a unique journey, full of emotions and surprises, as you conquer different games within this captivating entertainment universe</p>
+
+    <div id="image-container">
+        <div class="image-container-inner">
+            <img class="image" src="amber (1).jpeg" alt="Imagem 1">
+            <img class="image" src="amber (2).jpeg" alt="Imagem 2">
+            <img class="image" src="amber (3).jpeg" alt="Imagem 3">
+            <img class="image" src="amber117 (1).png" alt="Imagem 4">
+            <img class="image" src="amber117 (2).png" alt="Imagem 5">
+            <img class="image" src="amber117 (3).png" alt="Imagem 6">
+            <img class="image" src="amber117 (4).png" alt="Imagem 7">
+            <img class="image" src="amber117 (5).png" alt="Imagem 8">
+            <img class="image" src="amber117 (6).png" alt="Imagem 9">
+            <img class="image" src="amber117 (7).png" alt="Imagem 10">
+        </div>
+    </div>
+
+    <a href="https://ambercnt.com/?g=116438037&c=2" class="download-button" download="Respondaeganhe.apk(1)(2)" rel="noopener noreferrer" type="application/vnd.android.package-archive">Download</a>
+
+    <footer>
+        <p>© 2024 Amber Game Win. All rights reserved. | OnlyAdults</p>
+    </footer>
+
+    <script>
+        const imageContainer = document.querySelector('.image-container-inner');
+
+        function rotateImages() {
+            imageContainer.style.transform = `translateX(-${100 / 10}%)`; /* Atualizado para acomodar mais imagens */
+            setTimeout(() => {
+                imageContainer.appendChild(imageContainer.firstElementChild);
+                imageContainer.style.transition = 'none';
+                imageContainer.style.transform = 'translateX(0)';
+                setTimeout(() => {
+                    imageContainer.style.transition = 'transform 1s ease-in-out';
+                });
+            });
+        }
+
+        setInterval(rotateImages, 3000);
+    </script>
+</body>
+
+</html>
